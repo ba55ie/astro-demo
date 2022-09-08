@@ -4,7 +4,7 @@ layout: "../../layouts/Layout.astro"
 hobbies: huidige status onbekend
 ---
 
-# Pim van Die
+# Pimmol
 
 Denk je aan `charts`, dan denk je aan Pim.
 

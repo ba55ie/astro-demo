@@ -1,12 +1,12 @@
 ---
-layout: "../../layouts/Layout.astro"
+layout: '../../layouts/Layout.astro'
 
 hobbies: designen
 ---
 
 # Rudie
 
-Limburger uit R'dam Zuid.
+Onze designer / front-ender.
 
 ## Wist je dat?
 

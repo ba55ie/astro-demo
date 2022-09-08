@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Layout.astro"
 
-hobbies: ijshockey, 🍌 en rare filmpjes
+hobbies: ijshockey en 🍌🍌🍌
 ---
 
 # The Pres

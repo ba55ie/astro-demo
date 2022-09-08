@@ -1,7 +1,34 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+
+const persons = await Astro.glob('./*.md');
 ---
 
 <Layout title="Mensen">
 	<h1>Hero be people</h1>
+
+	<ul class="people">
+		{
+			persons.map((person) => (
+				<Card
+					title={person.getHeadings()[0].text}
+					body={person.frontmatter.hobbies}
+					href={person.url as string}
+				/>
+			))
+		}
+	</ul>
 </Layout>
+
+<style>
+	.people {
+		all: unset;
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+
+		margin: 0 0 1rem;
+	}
+</style>
