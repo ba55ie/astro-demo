@@ -2,6 +2,7 @@
 layout: '../../layouts/Layout.astro'
 
 hobbies: lego, 🍺 en F1
+vue: true
 ---
 
 # Kalkie

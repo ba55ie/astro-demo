@@ -2,6 +2,7 @@
 layout: '../../layouts/Layout.astro'
 
 hobbies: klauteren en filosoferen
+vue: true
 ---
 
 # Lanette

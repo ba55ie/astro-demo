@@ -1,17 +1,20 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Card from '../../components/Card.astro';
+import Card from '../../components/Card.vue';
 
-const persons = await Astro.glob('./*.md');
+let persons = await Astro.glob('./*.md');
+
+persons = persons.filter((p) => p.frontmatter.vue);
 ---
 
-<Layout title="Mensen">
-	<h1>Hero be people</h1>
+<Layout title="Vue people">
+	<h1>Deze mensen werken met <code>Vue</code></h1>
 
 	<ul class="people">
 		{
 			persons.map((person) => (
 				<Card
+					client:visible
 					title={person.getHeadings()[0].text}
 					body={person.frontmatter.hobbies}
 					href={person.url as string}
@@ -30,5 +33,11 @@ const persons = await Astro.glob('./*.md');
 		gap: 1rem;
 
 		margin: 0 0 1rem;
+	}
+
+	code {
+		color: darkgreen;
+
+		font-size: inherit;
 	}
 </style>

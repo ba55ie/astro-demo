@@ -2,6 +2,7 @@
 layout: '../../layouts/Layout.astro'
 
 hobbies: designen
+vue: true
 ---
 
 # Rudie

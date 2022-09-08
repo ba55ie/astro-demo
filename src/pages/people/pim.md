@@ -1,7 +1,8 @@
 ---
-layout: "../../layouts/Layout.astro"
+layout: '../../layouts/Layout.astro'
 
 hobbies: huidige status onbekend
+vue: true
 ---
 
 # Pimmol
