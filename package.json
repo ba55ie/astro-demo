@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.1.5"
+    "astro": "^1.1.5",
+    "cheerio": "^1.0.0-rc.12"
   },
   "devDependencies": {
     "@astrojs/vue": "^1.0.0",

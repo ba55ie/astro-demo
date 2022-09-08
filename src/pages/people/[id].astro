@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import { getHtml, getPeople } from '../../api.js';
+
+export const people = await getPeople();
+
+export const pages = await Promise.all(
+	people.map(async (p) => {
+		const $ = await getHtml(p.url);
+
+		p.$ = $;
+
+		return p;
+	})
+);
+
+/**
+ * @see https://docs.astro.build/en/reference/api-reference/#getstaticpaths
+ */
+export async function getStaticPaths() {
+	return pages.map(({ $, id }) => {
+		const title = $('h1', '.main').text();
+		const body = $('.text-max-width', '.main').html();
+
+		return {
+			params: {
+				id,
+			},
+			props: {
+				title,
+				body,
+			},
+		};
+	});
+}
+
+const { id } = Astro.params;
+const { title, body } = Astro.props;
+---
+
+<Layout title={title}>
+	<h1>{title}</h1>
+
+	<Fragment set:html={body} />
+</Layout>
