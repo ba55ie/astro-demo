@@ -7,10 +7,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "server": "node server.mjs",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^1.0.1",
     "astro": "^1.1.5",
+    "express": "^4.18.1",
     "cheerio": "^1.0.0-rc.12"
   },
   "devDependencies": {

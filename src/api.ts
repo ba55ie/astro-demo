@@ -17,11 +17,11 @@ export async function getHtml(url: string): Promise<CheerioAPI> {
 	return load(text);
 }
 
-const people: Person[] = [];
+const peopleCache: Person[] = [];
 
 export async function getPeople() {
-	if (people.length) {
-		return people;
+	if (peopleCache.length) {
+		return peopleCache;
 	}
 
 	const $ = await getHtml('https://www.vicompany.nl/vi-company');
@@ -30,7 +30,7 @@ export async function getPeople() {
 		const url = el.attribs['href'];
 		const id = url.split('/').pop() as string;
 
-		people.push({
+		peopleCache.push({
 			name: $('.heading', el).text(),
 			body: $('.is-subjacent', el).text().trim(),
 			id,
@@ -39,5 +39,29 @@ export async function getPeople() {
 		});
 	});
 
-	return people;
+	return peopleCache;
+}
+
+export type PersonDetail = {
+	title: string;
+	body: string;
+};
+
+const personCache = new Map<string, PersonDetail>();
+
+export async function getPerson(id: string): Promise<PersonDetail> {
+	if (personCache.has(id)) {
+		return personCache.get(id) as PersonDetail;
+	}
+
+	const $ = await getHtml(`https://www.vicompany.nl/vi-company/people/${id}`);
+
+	const title = $('h1', '.main').text();
+	const body = $('.text-max-width', '.main').html() || '';
+
+	const person: PersonDetail = { title, body };
+
+	personCache.set(id, person);
+
+	return person;
 }
