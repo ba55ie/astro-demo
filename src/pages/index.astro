@@ -1,96 +1,274 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Welkom op de VI Site">
+	<h1 class="sr-only">Home</h1>
+
+	<div class="hero-container hero-container--center hero-image">
+		<div class="container">
+			<div class="hero">
+				<div class="container">
+					<div class="text-max-width">
+						<div class="heading heading--display">
+							Future Proofing the Financial and Capital Markets
+						</div>
+
+						<div class="heading heading--small">
+							<p>
+								As domain specialists we conceptualize, build and maintain
+								mission critical websites and applications for clients such as
+								ING Bank, BNP Paribas, TCX, ABN Amro, Cardano, PGGM, Börse
+								Stuttgart and <a href="https://www.vicompany.nl/references"
+									>many others</a
+								>.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero__skip">
+				<a
+					href="#main-content"
+					class="button button--icon"
+					data-module="jump"
+					data-target="#main-content"
+				>
+					<svg viewBox="0 0 24 24" class="icon icon--small">
+						<use
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							xlink:href="#arrow-down"></use>
+					</svg>
+					<span class="sr-only">To main content</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero-adjecent" id="main-content">
+		<div class="container">
+			<div class="grid grid--wrap grid--align-center">
+				<div class="cell cell--1 cell--small-1/2">
+					<div class="text-max-width text-right text-right--small">
+						<h2 class="heading heading--medium">The perfect cocktail</h2>
+
+						<p>
+							Our development teams have great knowledge of the financial
+							markets. Combine this with their senior development, design and
+							analytical powers and you have the perfect cocktail for a highly
+							effective team.
+						</p>
+						<a class="button" href="/teams">Discover our teams</a>
+					</div>
+				</div>
+
+				<div class="cell cell--1 cell--small-1/2">
+					<span
+						class="lazyload lazyload--no-backdrop lazyload--ratio-1-1 js-lazyload"
+					>
+						<img
+							src="https://www.vicompany.nl/media/pages/home/teams/bfd85347d3-1637165813/hire.svg"
+							role="presentation"
+							class="lazyload__image has-loaded"
+						/>
+
+						<noscript>
+							<img
+								src="https://www.vicompany.nl/media/pages/home/teams/bfd85347d3-1637165813/hire.svg"
+								role="presentation"
+								class="lazyload__image"
+							/>
+						</noscript>
+					</span>
+				</div>
+			</div>
+			<div class="grid grid--wrap grid--align-center">
+				<div class="cell cell--1 cell--small-1/2">
+					<div class="text-max-width">
+						<h2 class="heading heading--medium">Strong reputation</h2>
+
+						<p>
+							The financial markets are big, complex and participants are well
+							interconnected. Yet another reason why we do our utmost to perform
+							really well; during development and especially when it's our
+							responsibility to keep it running and evolving.
+						</p>
+						<a class="button" href="/references">Check our references</a>
+					</div>
+				</div>
+
+				<div class="cell cell--1 cell--small-1/2 cell--small-order-start">
+					<div class="carousel">
+						<input
+							type="checkbox"
+							class="carousel__check"
+							tabindex="-1"
+							aria-hidden="true"
+						/>
+
+						<div class="carousel__slide">
+							<blockquote>
+								<p>VI Company is a very good service provider.</p>
+								<p>
+									<cite
+										>Bert Korevaar, (former) Global Head of PPI, ING Bank</cite
+									>
+								</p>
+							</blockquote>
+
+							<div class="carousel__counter">6 / 6</div>
+						</div>
+						<input
+							type="checkbox"
+							class="carousel__check"
+							tabindex="-1"
+							aria-hidden="true"
+						/>
+
+						<div class="carousel__slide">
+							<blockquote>
+								<p>
+									(…) creative, well-grounded team of VI Company. They perfectly
+									know how to manage the needs of all stakeholders involved
+									during the iterative process.
+								</p>
+								<p>
+									<cite
+										>Florian Hillen, Head of Structured Investments, Kempen
+										&amp; Co</cite
+									>
+								</p>
+							</blockquote>
+
+							<div class="carousel__counter">5 / 6</div>
+						</div>
+						<input
+							type="checkbox"
+							class="carousel__check"
+							tabindex="-1"
+							aria-hidden="true"
+						/>
+
+						<div class="carousel__slide">
+							<blockquote>
+								<p>
+									(...) And together with more fintech parnters we've now also
+									introduced instant lending to small and medium businesses in
+									Italy and France
+								</p>
+								<p><cite>Ralph Hamers, CEO, ING Bank N.V.</cite></p>
+							</blockquote>
+
+							<div class="carousel__counter">4 / 6</div>
+						</div>
+						<input
+							type="checkbox"
+							class="carousel__check"
+							tabindex="-1"
+							aria-hidden="true"
+						/>
+
+						<div class="carousel__slide">
+							<blockquote>
+								<p>
+									VI Company provided valuable input by thinking from the
+									perspective of Board members, and in doing so, delivered an
+									appealing and powerful reporting tool in a few iterations.
+								</p>
+								<p>
+									<cite
+										>Michael Kaal, Director Finance &amp; Risk at Unilever
+										Netherlands pension funds</cite
+									>
+								</p>
+							</blockquote>
+
+							<div class="carousel__counter">3 / 6</div>
+						</div>
+						<input
+							type="checkbox"
+							class="carousel__check"
+							tabindex="-1"
+							aria-hidden="true"
+						/>
+
+						<div class="carousel__slide">
+							<blockquote>
+								<p>
+									Our relationship with VI Company is open, fair and honest—VI
+									Company is our trusted advisor.
+								</p>
+								<p>
+									<cite>Chuffy Hunter, Head of cats, Boerse Stuttgart</cite>
+								</p>
+							</blockquote>
+
+							<div class="carousel__counter">2 / 6</div>
+						</div>
+						<input
+							type="checkbox"
+							class="carousel__check"
+							tabindex="-1"
+							aria-hidden="true"
+						/>
+
+						<div class="carousel__slide">
+							<blockquote>
+								<p>
+									By collaborating with VI Company, PGGM has been able to
+									further improve the quality of its portfolio management and to
+									execute more efficiently.
+								</p>
+								<p>
+									<cite
+										>Head of Client Portfolio Analysis &amp; Management, PGGM</cite
+									>
+								</p>
+							</blockquote>
+
+							<div class="carousel__counter">1 / 6</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid grid--wrap grid--align-center">
+				<div class="cell cell--1 cell--small-1/2">
+					<div class="text-max-width text-right text-right--small">
+						<h2 class="heading heading--medium">We are all partners</h2>
+
+						<p>
+							Founded in 2007, organically grown to the company it is today. An
+							organisation with <a
+								href="https://www.vicompany.nl/vi-company#people"
+								>a lot of talented people</a
+							> who all contribute to and participate as co-owners in VI Company.
+							Success truly is at its best when shared.
+						</p>
+						<a class="button" href="/vi-company">Curious about us?</a>
+					</div>
+				</div>
+
+				<div class="cell cell--1 cell--small-1/2">
+					<span
+						class="lazyload lazyload--no-backdrop lazyload--ratio-1-1 js-lazyload"
+					>
+						<noscript>
+							<img
+								src="https://www.vicompany.nl/media/pages/home/vi-company/a1a4d7ce92-1637165813/distribution.svg"
+								role="presentation"
+								class="lazyload__image"
+							/>
+						</noscript>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.hero-image {
+		background-image: url('/images/backgrounds/blocks.svg');
 	}
 </style>

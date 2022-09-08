@@ -1,0 +1,88 @@
+<div class="navigation-container" data-module="navigation">
+	<button
+		class="button button--unstyled navigation-toggle js-navigation-toggle"
+		aria-haspopup="true"
+		aria-controls="site-navigation"
+		data-open-label="Show navigation"
+		data-close-label="Hide navigation"
+		aria-expanded="false"
+		aria-hidden="true"
+	>
+		<svg viewBox="0 0 24 24" class="icon icon--small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
+		</svg>
+		<span class="sr-only js-toggle-button-label">Show navigation</span>
+	</button>
+
+	<nav
+		class="navigation navigation--flyout js-navigation"
+		id="site-navigation"
+		aria-labelledby="site-navigation-heading"
+	>
+		<h2 id="site-navigation-heading" class="sr-only">Site</h2>
+
+		<ul>
+			<li class="navigation__item navigation__item--flyout">
+				<a
+					href="https://www.vicompany.nl/teams"
+					class="navigation__link navigation__link--flyout"
+				>
+					Teams
+				</a>
+			</li>
+			<li class="navigation__item navigation__item--flyout">
+				<a
+					href="https://www.vicompany.nl/references"
+					class="navigation__link navigation__link--flyout"
+				>
+					References
+				</a>
+			</li>
+			<li class="navigation__item navigation__item--flyout">
+				<a
+					href="https://www.vicompany.nl/vi-company"
+					class="navigation__link navigation__link--flyout"
+				>
+					About us
+				</a>
+			</li>
+			<li class="navigation__item navigation__item--flyout">
+				<a
+					href="https://www.vicompany.nl/magazine"
+					class="navigation__link navigation__link--flyout"
+				>
+					Magazine
+				</a>
+			</li>
+			<li class="navigation__item navigation__item--flyout">
+				<a
+					href="https://www.vicompany.nl/jobs"
+					class="navigation__link navigation__link--flyout"
+				>
+					Careers <sup>4</sup>
+				</a>
+			</li>
+			<li class="navigation__item navigation__item--flyout">
+				<a
+					href="https://www.vicompany.nl/contact"
+					class="navigation__link navigation__link--flyout"
+				>
+					Contact
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<nav class="navigation" aria-labelledby="language-navigation">
+		<h2 id="language-navigation" class="sr-only">Language</h2>
+
+		<ul>
+			<li class="navigation__item is-active">
+				<a href="https://www.vicompany.nl" class="navigation__link"> EN</a>
+			</li>
+			<li class="navigation__item">
+				<a href="https://www.vicompany.nl/nl" class="navigation__link"> NL</a>
+			</li>
+		</ul>
+	</nav>
+</div>
