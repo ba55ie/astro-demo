@@ -1,0 +1,47 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="hero-container hero-container--center hero-image">
+	<div class="container">
+		<div class="hero">
+			<div class="container">
+				<div class="text-max-width">
+					<div class="heading heading--display">
+						{title}
+					</div>
+
+					<div class="heading heading--small">
+						<slot />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero__skip">
+			<a
+				href="#main-content"
+				class="button button--icon"
+				data-module="jump"
+				data-target="#main-content"
+			>
+				<svg viewBox="0 0 24 24" class="icon icon--small">
+					<use
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						xlink:href="#arrow-down"></use>
+				</svg>
+				<span class="sr-only">To main content</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<style>
+	.hero-image {
+		background-image: url('/images/backgrounds/blocks.svg');
+	}
+</style>

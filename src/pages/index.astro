@@ -1,50 +1,20 @@
 ---
+import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welkom op de VI Site">
 	<h1 class="sr-only">Home</h1>
 
-	<div class="hero-container hero-container--center hero-image">
-		<div class="container">
-			<div class="hero">
-				<div class="container">
-					<div class="text-max-width">
-						<div class="heading heading--display">
-							Future Proofing the Financial and Capital Markets
-						</div>
-
-						<div class="heading heading--small">
-							<p>
-								As domain specialists we conceptualize, build and maintain
-								mission critical websites and applications for clients such as
-								ING Bank, BNP Paribas, TCX, ABN Amro, Cardano, PGGM, Börse
-								Stuttgart and <a href="https://www.vicompany.nl/references"
-									>many others</a
-								>.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="hero__skip">
-				<a
-					href="#main-content"
-					class="button button--icon"
-					data-module="jump"
-					data-target="#main-content"
-				>
-					<svg viewBox="0 0 24 24" class="icon icon--small">
-						<use
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							xlink:href="#arrow-down"></use>
-					</svg>
-					<span class="sr-only">To main content</span>
-				</a>
-			</div>
-		</div>
-	</div>
+	<Hero title="Iets met financiele markten">
+		<p>
+			As domain specialists we conceptualize, build and maintain mission
+			critical websites and applications for clients such as ING Bank, BNP
+			Paribas, TCX, ABN Amro, Cardano, PGGM, Börse Stuttgart and <a
+				href="https://www.vicompany.nl/references">many others</a
+			>.
+		</p>
+	</Hero>
 
 	<div class="hero-adjecent" id="main-content">
 		<div class="container">
@@ -266,9 +236,3 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</div>
 </Layout>
-
-<style>
-	.hero-image {
-		background-image: url('/images/backgrounds/blocks.svg');
-	}
-</style>
